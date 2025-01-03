@@ -17,7 +17,8 @@
 		"P-1/TR" : {
 			"6.600 VA s/d 200kVA" : 1699.53
 		},
-		"P-3/TR" : 1699.53
+		"P-3/TR" : 1699.53,
+		"L/TR, TM, TT": 1644.52
 	},
 	"tarif-ppj": {
 		"Kabupaten Bogor": {

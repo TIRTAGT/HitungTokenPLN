@@ -301,7 +301,6 @@ class Main {
 		}
 
 		let help_text = "";
-		let JumlahKodeTegangan = 0;
 
 		//#region Cek kelas golongan
 		let KelasGolongan = KeyGolongan.split("/")[0];
@@ -314,40 +313,46 @@ class Main {
 		else if (KelasGolongan.includes("P-")) {
 			help_text += `Pemerintah tingkat-${KelasGolongan.split("-")[1]} `;
 		}
+		else if (KelasGolongan.includes("L")) {
+			help_text += "Lainnya ";
+		}
 		else {
 			help_text += "Golongan Tidak Diketahui ";
 		}
 		//#endregion
 
-		help_text += "(";
-
 		//#region Cek kelas tegangan
+		const TextTegangan = [];
+
 		if (KeyGolongan.indexOf("TR") !== -1) {
-			help_text += "Tegangan Rendah";
-			JumlahKodeTegangan++;
+			TextTegangan.push("Teganan Rendah");
 		}
 
 		if (KeyGolongan.indexOf("TM") !== -1) {
-			if (JumlahKodeTegangan > 0) {
-				help_text += " dan ";
-			}
-
-			help_text += "Tegangan Menengah";
-			JumlahKodeTegangan++;
+			TextTegangan.push("Tegangan Menengah");
 		}
 
 		// Jika ada Tegangan Tinggi (TT)
 		if (KeyGolongan.indexOf("TT") !== -1) {
-			if (JumlahKodeTegangan > 0) {
-				help_text += " dan ";
+			TextTegangan.push("Tegangan Tinggi");
+		}
+
+		if (TextTegangan.length > 0) {
+			help_text += "(";
+
+			help_text += TextTegangan.shift();
+
+			for (let i = 0; i < TextTegangan.length - 1; i++) {
+				help_text += `, ${TextTegangan[i]}`;
 			}
 
-			help_text += "Tegangan Tinggi";
-			JumlahKodeTegangan++;
+			if (TextTegangan.length > 0) {
+				help_text += ` dan ${TextTegangan.pop()}`;
+			}
+
+			help_text += ")";
 		}
 		//#endregion
-
-		help_text += ")";
 
 		this.InputGolonganTarifHelp.innerText = help_text;
 	}
@@ -447,7 +452,7 @@ class Main {
 			let GolonganTerpilih = DaerahTerpilih[KeyGolongan];
 
 			if (!GolonganTerpilih) {
-				PPJOptions.push(`<option value="0.0">${DaerahKey} (Tidak ada data PPj)</option>`);
+				PPJOptions.push(`<option value="0.0">${DaerahKey} (Tidak ada data untuk golongan ini)</option>`);
 				continue;
 			}
 
@@ -460,14 +465,14 @@ class Main {
 			let KeysBatasDaya = Object.keys(GolonganTerpilih);
 
 			if (KeysBatasDaya.length == 0) {
-				PPJOptions.push(`<option value="0.0">${DaerahKey} (Tidak ada data PPj)</option>`);
+				PPJOptions.push(`<option value="0.0">${DaerahKey} (Tidak ada data untuk golongan ini)</option>`);
 				continue;
 			}
 
 			let RatePPj = GolonganTerpilih[KeysBatasDaya[IndexBatasDaya]];
 
 			if (!RatePPj) {
-				PPJOptions.push(`<option value="0.0">${DaerahKey} (Tidak ada data PPj)</option>`);
+				PPJOptions.push(`<option value="0.0">${DaerahKey} (Tidak ada data untuk batas daya ini)</option>`);
 				continue;
 			}
 
