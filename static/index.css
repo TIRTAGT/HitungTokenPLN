@@ -16,6 +16,10 @@ sub {
 	font-size: 0.8em;
 }
 
+#header-by-credit sub {
+	font-size: 0.75em;
+}
+
 #calc-output > div:first-child {
 	min-height: 27vh;
 }

@@ -54,20 +54,27 @@
 	<nav class="navbar bg-body-tertiary">
 		<div class="container-fluid">
 			<div class="d-flex me-auto">
-				HitungTokenPLN
-				<a href="https://github.com/TIRTAGT" target="_blank" rel="noopener author" class="d-none d-sm-block text-decoration-none text-body" tabindex="-1">
-					<sub>by Matthew Tirtawidjaja</sub>
-				</a>
+				HitungTokenPLN 
+				<div class="d-none d-sm-block" id="header-by-credit">
+					<sub class="d-inline">by</sub>
+					<a href="https://github.com/TIRTAGT" target="_blank" rel="noopener author" class="d-inline text-decoration-none text-body" tabindex="-1">
+						<sub class="text-primary-emphasis text-decoration-underline">Matthew Tirtawidjaja<i class="bi bi-arrow-up-right-square ps-1"></i></sub>
+					</a>
+					<sub>+</sub>
+					<a href="https://github.com/TIRTAGT/HitungTokenPLN/blob/master/CONTRIBUTORS.md" target="_blank" rel="noopener author" class="d-inline text-decoration-none text-body" tabindex="-1">
+						<sub class="text-decoration-underline text-info">Kontributor<i class="bi bi-arrow-up-right-square ps-1"></i></sub>
+					</a>
+				</div>
 			</div>
 
 			<div class="d-none d-md-block">
-				<a href="https://github.com/TIRTAGT/HitungTokenPLN" target="_blank" rel="noopener" class="d-none d-sm-block text-decoration-none text-body" tabindex="-1">
+				<a href="https://github.com/TIRTAGT/HitungTokenPLN" target="_blank" rel="noopener" class="d-none d-sm-block text-decoration-none text-info" tabindex="-1">
 					View Code on GitHub
 					<i class="bi bi-arrow-up-right-square ps-1"></i>
 				</a>
 			</div>
 
-			<div class="d-md-none">
+			<div class="d-md-none text-info">
 				GitHub
 				<i class="bi bi-arrow-up-right-square ps-1"></i>
 			</div>
@@ -84,15 +91,15 @@
 				<label for="input-golongan-tarif" class="form-label">
 					Golongan Tarif
 					<a href="https://web.pln.co.id/pelanggan/tarif-tenaga-listrik/tariff-adjustment" target="_blank" rel="noopener" class="ms-2 text-decoration-none text-info">
-						<sub class="bi">
-							Cek disini <span class="bi-arrow-up-right-square"></span>
+						<sub>
+							Cek disini <span class="bi bi-arrow-up-right-square"></span>
 						</sub>
 					</a>
 				</label>
 	
 				<select class="form-select" id="input-golongan-tarif" name="input-golongan-tarif" required>
 					<option value="" selected>Pilih Golongan Tarif</option>
-                    <!-- Will automatically be filled from JavaScript -->
+					<!-- Will automatically be filled from JavaScript -->
 				</select>
 				
 				<div class="form-text" id="input-golongan-tarif-help">
@@ -122,7 +129,7 @@
 				<div class="form-text">
 					Ingin biaya PPj daerah anda ditambahkan? 
 					<a href="https://forms.gle/doaHdRWZHsz35Kwx7" target="_blank" rel="noopener" class="text-decoration-none text-info">
-						Beritahu saya <span class="bi-arrow-up-right-square"></span>
+						Beritahu saya <span class="bi bi-arrow-up-right-square"></span>
 					</a>
 				</div>
 				
