@@ -1,0 +1,27 @@
+{
+  "name": "hitungtokenpln",
+  "version": "1.0.0",
+  "description": "Aplikasi kalkulator penghitung jumlah kWh atau nilai token dari pembelian listrik PLN",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TIRTAGT/HitungTokenPLN.git"
+  },
+  "keywords": [
+    "PLN",
+    "TIRTAGT"
+  ],
+  "author": "Matthew Tirtawidjaja <matthew@tirtagt.xyz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TIRTAGT/HitungTokenPLN/issues"
+  },
+  "homepage": "https://github.com/TIRTAGT/HitungTokenPLN#readme",
+  "devDependencies": {
+    "@types/web": "^0.0.188",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,32 @@
+/**
+ * TIRTAGT/HitungTokenPLN
+ * 
+ * Aplikasi kalkulator penghitung jumlah kWh atau nilai token dari pembelian listrik PLN
+ * @link https://github.com/TIRTAGT/HitungTokenPLN
+ * @author Matthew Tirtawidjaja <matthew@tirtagt.xyz>
+ * @copyright 2025 Matthew Tirtawidjaja <matthew@tirtagt.xyz>
+ * @license MIT
+ */
+
+body {
+	font-size: 1.25em;
+}
+
+sub {
+	font-size: 0.8em;
+}
+
+#calc-output > div:first-child {
+	min-height: 27vh;
+}
+
+#theme-toggle {
+	font-size: 0.9em;
+	cursor: pointer;
+}
+
+@media (max-width: 800px) {
+	#calc-input, #calc-output {
+		width: 100% !important;
+	}
+}
